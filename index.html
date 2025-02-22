@@ -1,66 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8">
-    <title>Exceptional Realty Group - Luxury Homes - About</title>
-    <!-- Don't forget to link your CSS file! -->
-  </head>
-  <body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real Estate Website</title>
+    <link rel="stylesheet" href="./style.css" />
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
     <header>
-      <!-- logo -->
-      <h1>Exceptional Realty Group</h1>
-
-      <nav>
-        <a href="index.html">About</a> <a href="new-properties.html">New Properties</a> <a href="real-estate-listings.html">Listings</a> <a href="market-report.html">Market Report</a> <a href="contact.html">Contact</a> <a href="http://hud.gov" target="_blank">H.U.D.</a>
-      </nav>
+        <h1>Welcome to Our Real Estate Website</h1>
     </header>
 
-    <section id="featured-property">
-      <figure>
-        <img src="images/intro-pic.jpg" alt="A beautiful living room." title="Welcome to Exceptional Realty Group">
-        <figcaption>345 Carl Street Apt 12, Carrol Rd. Brooklyn, NY - Photo by Denise Richards.</figcaption>
-      </figure>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Real Estate</a>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Listings</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quae, perferendis nisi nihil debitis aspernatur doloribus quam eveniet quibusdam tempora esse! Repudiandae, assumenda, debitis doloribus ea eius ab at quae totam. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, inventore aliquid ipsam debitis nulla vitae omnis nemo quisquam? Obcaecati dolor ipsum distinctio reprehenderit aliquid autem ea vel provident voluptas nisi.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, natus, nobis, tempore recusandae culpa deleniti dignissimos laborum perspiciatis exercitationem obcaecati dolores unde eveniet eius debitis perferendis provident porro. Ipsum, placeat.</p>
-    </section>
+    <main>
+        <section id="hero">
+            <img src="path_to_hero_image.jpg" alt="Hero Image">
+            <h1>Find Your Dream Home</h1>
+            <p>Explore our listings and find the perfect property.</p>
+        </section>
 
-    <section id="details">
-      <div>
-        <h3>Contact</h3>
-        <p>
-          <a href="mailto:info@exceptionalrealty.com">info@exceptionalrealty.com</a><br>
-          +1 710 555 1234<br>
-          @fakeRealty
-        </p>
-      </div>
-      
-      <div>
-        <h3>Correspondence</h3>
-        <p>
-          Exceptional Realty<br>
-          P.O. Box 5555<br>
-          Brooklyn, NY 11201
-        </p>
-      </div>
+        <section id="featured-property">
+            <h2>Featured Property</h2>
+            <img src="images/intro-pic.jpg" alt="Property Image">
+            <figcaption>Beautiful property located in the heart of the city.</figcaption>
+            <p>This exquisite property boasts 3 bedrooms, 2 bathrooms, and a stunning view of the city skyline. It is located in a prime area with easy access to amenities and public transportation.</p>
+        </section>
 
-      <div>
-        <h3>Links</h3>
-        <p>
-          <a href="#" target="_blank">Home Restoration</a><br>
-          <a href="#" target="_blank">Affordable Mortgages</a><br>
-          <a href="#" target="_blank">Professional Moving Crew</a>
-        </p>
-      </div>
+        <section id="details">
+            <div>3 Bedrooms</div>
+            <div>2 Bathrooms</div>
+            <div>City View</div>
+            <div>Prime Location</div>
+        </section>
 
-      <div>
-        <h3>Follow</h3>
-        <p>
-          <a href="#" target="_blank">YouTube</a><br>
-          <a href="#" target="_blank">Facebook</a><br>
-          <a href="#" target="_blank">Twitter</a>
-        </p>
-      </div>
-    </section>
-  </body>
+        <section id="testimonials">
+            <h2>Testimonials</h2>
+            <p>"Great service!" - Customer A</p>
+            <p>"Loved the experience!" - Customer B</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" required></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div>Contact Us</div>
+        <div>Privacy Policy</div>
+        <div>Terms of Service</div>
+        <div>About Us</div>
+    </footer>
+
+    <!-- Include Bootstrap JS (optional, for navbar functionality) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Google Maps integration -->
+    <script>
+        function initMap() {
+            var location = {lat: -1.2921, lng: 36.8219}; // Example coordinates (Nairobi, Kenya)
+            var map = new google.maps.Map(document.getElementById('google-map'), {
+                zoom: 10,
+                center: location
+            });
+            var marker = new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        }
+    </script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script>
+</body>
 </html>
